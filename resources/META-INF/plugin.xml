@@ -1,0 +1,33 @@
+<idea-plugin>
+  <id>pers.th.idea.sshRoot</id>
+  <name>SSH Root Relieve</name>
+  <version>1.0</version>
+  <vendor email="tianhao7@foxmail.com" url="http://lyrieek.github.io">Lyrieek</vendor>
+
+  <description>SSH Root Relieve</description>
+
+  <change-notes>
+    解除Tomcat目录的权限,————天浩
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action id="RootAction" class="pers.th.idea.RootAction" icon="/pers/th/idea/icons/key.png" text="SSH" description="SSH Request">
+      <add-to-group group-id="MainToolBar" anchor="last" />
+    </action>
+  </actions>
+
+</idea-plugin>
