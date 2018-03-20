@@ -1,2 +1,3 @@
 # SSH_Plugin
-SSH Plugin
+Using SSH for remote interaction
+
