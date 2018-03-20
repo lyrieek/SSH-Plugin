@@ -25,8 +25,12 @@
   </extensions>
 
   <actions>
-    <action id="RootAction" class="pers.th.idea.RootAction" icon="/pers/th/idea/icons/key.png" text="SSH" description="SSH Request">
+    <action id="SSHRootActionControl" class="pers.th.idea.RootAction" icon="/pers/th/idea/icons/key.png" text="SSH" description="SSH Request">
       <add-to-group group-id="MainToolBar" anchor="last" />
+    </action>
+    <action id="SSHTomcatControl" class="pers.th.idea.TomcatControlAction" icon="/pers/th/idea/icons/tomcat.png" text="SSH Tomcat Control"
+            description="SSH Tomcat Control">
+      <add-to-group group-id="MainToolBar" anchor="last"/>
     </action>
   </actions>
 

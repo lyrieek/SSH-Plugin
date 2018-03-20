@@ -2,6 +2,7 @@
   <dictionary name="user">
     <words>
       <w>chown</w>
+      <w>gitignore</w>
       <w>pers</w>
       <w>sudo</w>
       <w>versionsystem</w>
