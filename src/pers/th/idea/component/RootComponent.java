@@ -1,4 +1,4 @@
-package pers.th.idea.Component;
+package pers.th.idea.component;
 
 import com.intellij.openapi.components.ApplicationComponent;
 import com.intellij.openapi.ui.Messages;
