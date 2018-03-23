@@ -1,8 +1,5 @@
 package pers.th.idea;
 
-import com.intellij.notification.Notification;
-import com.intellij.notification.NotificationType;
-import com.intellij.notification.Notifications;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 
@@ -23,14 +20,10 @@ public class RootAction extends AnAction {
             connect.send("sudo chmod 777 -R ./");
             connect.send("exit");
             connect.close();
-            Notification notification = new Notification("pers.th.idea.sshRoot", "SSH Root", "Success", NotificationType.INFORMATION);
-            Notifications.Bus.notify(notification);
-            if (notification.getBalloon() != null) notification.getBalloon().hide();
+            Notif.alert("SSH Root", "Success");
 //            Messages.showMessageDialog("Success", "Info", IconLoader.findIcon("/pers/th/idea/icons/key.png"));
         } catch (Exception ex) {
-            Notification notification = new Notification("pers.th.idea.sshRoot", "SSH Root", "ex:" + ex.getMessage(), NotificationType.ERROR);
-            Notifications.Bus.notify(notification);
-            if (notification.getBalloon() != null) notification.getBalloon().hide();
+            Notif.error("SSH Root", "ex:" + ex.getMessage());
         }
     }
 }
