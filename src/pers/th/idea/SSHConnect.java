@@ -37,13 +37,13 @@ public class SSHConnect {
         send("sudo chmod 777 * -R");
     }
 
-    public void send(String cmd) throws Exception {
+    public String send(String cmd) throws Exception {
         output.write(cmd.concat("\n").getBytes());
         output.flush();
         byte[] buffer = new byte[1024];
         int length = -1;
         Thread.sleep(500);
-        StringBuffer response = new StringBuffer();
+        StringBuilder response = new StringBuilder();
         while (input.available() != 0 && (length = input.read(buffer)) != -1) {
             response.append(new String(buffer, 0, length, "utf-8"));
         }
@@ -51,7 +51,8 @@ public class SSHConnect {
                 || response.toString().trim().endsWith("Password:")) {
             send("version");
         }
-        System.out.println(response);
+        Notif.alert("Tomcat Restart",response.toString());
+        return response.toString();
     }
 
     public void call() throws Exception {
