@@ -22,16 +22,6 @@ public class SSHConnect {
     private InputStream input;
     private OutputStream output;
 
-//    public static void main(String[] args) throws Exception {
-//        SSHConnect connect = new SSHConnect();
-//        connect.session("versionhk.asuscomm.com", "user", "version", 22);
-//        connect.send("cal");
-//        connect.send("ll");
-//        connect.send("service tomcat8 restart");
-//        connect.send("exit");
-//        connect.close();
-//    }
-
     public void authorization(String user) throws Exception {
         send("sudo chown " + user + " * -R");
         send("sudo chmod 777 * -R");
